@@ -27,9 +27,8 @@ import io.swagger.v3.oas.annotations.servers.Server;
 public interface CustomerController {
   
   @Operation(
-      summary=  "Returns a list of customers.",
-      description = "Returns a list of customers given customer id."
-          + "and/or first name and/or last name.",
+      summary=  "Returns customer.",
+      description = "Returns a customer given customer id.",
       responses = {
           @ApiResponse(
               responseCode = "200", 
@@ -53,18 +52,18 @@ public interface CustomerController {
           @Parameter(
               name = "customer_id", 
               allowEmptyValue = false, 
-              required = false, 
+              required = true, 
               description = "The customer id."),
-          @Parameter(
-              name = "first_name", 
-              allowEmptyValue = false, 
-              required = false, 
-              description = "The customer first name."),
-          @Parameter(
-              name = "last_name", 
-              allowEmptyValue = false, 
-              required = false, 
-              description = "The customer last name."),
+        @Parameter( 
+            name = "first_name",
+            allowEmptyValue = false, required = false,
+            description ="The customer first name."),
+        @Parameter(
+            name = "last_name", 
+            allowEmptyValue = false, 
+            required = false, 
+            description ="The customer last name."),
+       
       }
 )
   
