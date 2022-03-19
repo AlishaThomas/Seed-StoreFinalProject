@@ -1,0 +1,10 @@
+spring:
+  datasource:
+   password: seedstore
+   username: seedstore
+   url: jdbc:mysql://localhost:3306/seedstore
+    
+logging:
+  level:
+    root: warn
+    '[com.promineotech]': debug
